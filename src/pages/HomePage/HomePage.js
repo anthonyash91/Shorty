@@ -212,7 +212,18 @@ export default function HomePage({
                 required
               />
 
-              <button>
+              <button
+                onClick={() => {
+                  setNewGlobalLink({
+                    ...newGlobalLink,
+                    date: new Date().toLocaleDateString("en-us", {
+                      year: "numeric",
+                      month: "numeric",
+                      day: "numeric",
+                    }),
+                  });
+                }}
+              >
                 <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
                   <line
                     id="secondary"
