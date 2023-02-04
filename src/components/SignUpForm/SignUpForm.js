@@ -42,7 +42,7 @@ export default function SignUpForm({
       delete formDataCopy.confirm;
       const user = await signUp(formDataCopy);
       setUser(user);
-      navigate("/dashboard");
+      navigate("/u/dashboard");
       setShowShortenedUrl(false);
       setNewGlobalLink({ url: "" });
     } catch (error) {

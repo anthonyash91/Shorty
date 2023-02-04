@@ -26,7 +26,7 @@ export default function LoginForm({
     try {
       const user = await userService.login(credentials);
       setUser(user);
-      navigate("/dashboard");
+      navigate("/u/dashboard");
       setShowShortenedUrl(false);
       setNewGlobalLink({ url: "" });
     } catch (error) {
