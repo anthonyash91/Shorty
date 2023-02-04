@@ -236,6 +236,7 @@ main {
 
 #convinced {
   border: none;
+  color: var(--primary-color);
   min-width: 100%;
 }
 
@@ -348,7 +349,7 @@ main {
   border: none;
   color: #e9e9e9;
   margin-top: 20px;
-  padding: 75px 0 50px 0;
+  padding: 145px 0 120px 0;
   position: relative;
   text-shadow: 1px 1px rgba(0,0,0,.1);
 }
@@ -356,6 +357,7 @@ main {
 #faqs-container::before,
 #faqs-container::after {
   background-image: url(https://assets.codepen.io/8370674/split_2.svg);
+  /* background-color: yellow; */
   content: '';
   height: 150px;
   position: absolute;
