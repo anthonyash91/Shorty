@@ -6,7 +6,9 @@ import {
   useNavigate,
   Navigate,
   BrowserRouter,
+  BrowserRouter as Router,
 } from "react-router-dom";
+
 import { getUser } from "../../utilities/users-service";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import UserDashboard from "../UserDashboard/UserDashboard";
