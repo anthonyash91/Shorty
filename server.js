@@ -28,10 +28,6 @@ app.use('/api', routes) <====== Finish code once you got it
 */
 app.use("/api/users", require("./routes/api/users"));
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-
 app.get("/:shortUrl", async (req, res) => {
   const shortUrl = await Link.findOne({ shortUrl: req.params.shortUrl });
   if (shortUrl == null) return res.sendStatus(404);
@@ -40,6 +36,9 @@ app.get("/:shortUrl", async (req, res) => {
   shortUrl.save();
 
   res.redirect(shortUrl.url);
+});
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.get("/linkTree/:userId", async (req, res) => {
