@@ -9,7 +9,7 @@ import QRCode from "react-qr-code";
 export default function UserDashboard({
   user,
   setUser,
-  showShortenedUrl,
+  setShowShortenedUrl,
   userLink,
   newUserLink,
   createUserLink,
@@ -138,6 +138,7 @@ export default function UserDashboard({
               className="flex"
               onClick={() => {
                 navigate("/");
+                setShowShortenedUrl(false);
               }}
             >
               <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
