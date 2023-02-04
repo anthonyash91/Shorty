@@ -178,7 +178,7 @@ export default function UserDashboard({
                 id="register-button"
                 className="login-register"
                 onClick={() => {
-                  navigate(`/linkTree/${user.name}`);
+                  navigate(`/${user.name}`);
                 }}
               >
                 Link-In-Bio
