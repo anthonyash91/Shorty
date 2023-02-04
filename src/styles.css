@@ -115,6 +115,7 @@ nav #logo svg {
   fill: var(--accent-color);
   filter: drop-shadow(1px 1px 0 rgb(0 0 0 / 0.08));
   height: 35px;
+  margin-top: 1px;
   transform: rotate(-90deg);
 }
 
