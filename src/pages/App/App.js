@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import AuthPage from "../AuthPage/AuthPage";
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useNavigate,
+  Navigate,
+  BrowserRouter,
+} from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import UserDashboard from "../UserDashboard/UserDashboard";
