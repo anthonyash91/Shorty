@@ -86,58 +86,56 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              user={user}
+              setUser={setUser}
+              globalLink={globalLink}
+              createGlobalLink={createGlobalLink}
+              newGlobalLink={newGlobalLink}
+              handleChange={handleChange}
+              signUpModal={signUpModal}
+              setSignUpModal={setSignUpModal}
+              showShortenedUrl={showShortenedUrl}
+              setShowShortenedUrl={setShowShortenedUrl}
+              createUserLink={createUserLink}
+              userLink={userLink}
+              setUserLink={setUserLink}
+              newUserLink={newUserLink}
+              setNewUserLink={setNewUserLink}
+              handleUserLinkChange={handleUserLinkChange}
+              setNewGlobalLink={setNewGlobalLink}
+            />
+          }
+        />
+        <Route path="/:name" element={<LinkTree />} />
+
+        {user ? (
           <Route
-            path="/"
+            path="/dashboard"
             element={
-              <HomePage
+              <UserDashboard
                 user={user}
                 setUser={setUser}
-                globalLink={globalLink}
-                createGlobalLink={createGlobalLink}
-                newGlobalLink={newGlobalLink}
-                handleChange={handleChange}
-                signUpModal={signUpModal}
-                setSignUpModal={setSignUpModal}
                 showShortenedUrl={showShortenedUrl}
                 setShowShortenedUrl={setShowShortenedUrl}
-                createUserLink={createUserLink}
                 userLink={userLink}
                 setUserLink={setUserLink}
                 newUserLink={newUserLink}
                 setNewUserLink={setNewUserLink}
+                createUserLink={createUserLink}
                 handleUserLinkChange={handleUserLinkChange}
                 setNewGlobalLink={setNewGlobalLink}
               />
             }
           />
-          <Route path="/:name" element={<LinkTree />} />
-
-          {user ? (
-            <Route
-              path="/dashboard"
-              element={
-                <UserDashboard
-                  user={user}
-                  setUser={setUser}
-                  showShortenedUrl={showShortenedUrl}
-                  setShowShortenedUrl={setShowShortenedUrl}
-                  userLink={userLink}
-                  setUserLink={setUserLink}
-                  newUserLink={newUserLink}
-                  setNewUserLink={setNewUserLink}
-                  createUserLink={createUserLink}
-                  handleUserLinkChange={handleUserLinkChange}
-                  setNewGlobalLink={setNewGlobalLink}
-                />
-              }
-            />
-          ) : (
-            <Route path="/dashboard" element={<Navigate to="/" />} />
-          )}
-        </Routes>
-      </BrowserRouter>
+        ) : (
+          <Route path="/dashboard" element={<Navigate to="/" />} />
+        )}
+      </Routes>
     </>
   );
 }
