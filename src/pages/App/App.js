@@ -12,7 +12,7 @@ function App() {
   const [globalLink, setGlobalLink] = useState({});
   const [newGlobalLink, setNewGlobalLink] = useState({
     url: "",
-    linkTree: "off",
+    linkTree: false,
   });
 
   const [showShortenedUrl, setShowShortenedUrl] = useState(false);
@@ -45,7 +45,7 @@ function App() {
   const [userLink, setUserLink] = useState("");
   const [newUserLink, setNewUserLink] = useState({
     url: "",
-    linkTree: "off",
+    linkTree: false,
     title: "",
   });
 
