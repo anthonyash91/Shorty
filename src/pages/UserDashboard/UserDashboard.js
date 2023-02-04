@@ -133,7 +133,13 @@ export default function UserDashboard({
       <header id="dashboard" className="flex">
         <div id="nav-container" className="flex">
           <nav className="flex">
-            <div id="logo" className="flex">
+            <div
+              id="logo"
+              className="flex"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
               <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
                 <path
                   id="secondary"

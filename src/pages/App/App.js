@@ -60,7 +60,7 @@ function App() {
   const createUserLink = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`api/links/${user._id}`, {
+      const response = await fetch(`/api/links/${user._id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

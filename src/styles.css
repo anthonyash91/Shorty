@@ -111,6 +111,7 @@ nav {
 
 nav #logo {
   align-items: center;
+  cursor: pointer;
   font-size: 40px;
   font-weight: 700;
   gap: 8px;
@@ -1173,6 +1174,7 @@ b {font-weight: 700;}
 .link-date-clicks {
   font-size: 14px;
   gap: 10px;
+  opacity: .5;
 }
 
 .link-shortened {
