@@ -16,6 +16,10 @@ export default function UserDashboard({
   handleUserLinkChange,
   setNewUserLink,
   setNewGlobalLink,
+  showNewShortyForm,
+  setShowNewShortyForm,
+  linkTreeToggled,
+  setLinkTreeToggled,
 }) {
   const [showEditLink, setShowEditLink] = useState("");
 
@@ -23,8 +27,6 @@ export default function UserDashboard({
     title: "",
   });
 
-  const [showNewShortyForm, setShowNewShortyForm] = useState(false);
-  const [linkTreeToggled, setLinkTreeToggled] = useState(false);
   const [showCopiedMessage, setShowCopiedMessage] = useState("");
   const [showQrModal, setShowQrModal] = useState("");
   const [showEditModal, setShowEditModal] = useState("");
@@ -277,6 +279,13 @@ export default function UserDashboard({
                   className="new-shorty"
                   onClick={() => {
                     setShowNewShortyForm(!showNewShortyForm);
+                    setNewUserLink({
+                      url: "",
+                      linkTree: "off",
+                      title: "",
+                    });
+
+                    setLinkTreeToggled(false);
                   }}
                 >
                   New Shorty
@@ -409,7 +418,7 @@ export default function UserDashboard({
                     </div>
 
                     <button
-                      className={newUserLink.url ? "" : "disabled"}
+                      // className={newUserLink.url ? "" : "disabled"}
                       onClick={() => {
                         setNewUserLink({
                           ...newUserLink,
@@ -419,18 +428,6 @@ export default function UserDashboard({
                             day: "numeric",
                           }),
                         });
-
-                        setTimeout(() => {
-                          setNewUserLink({
-                            url: "",
-                            linkTree: "off",
-                            title: "",
-                          });
-
-                          setLinkTreeToggled(false);
-                        }, 300);
-
-                        setShowNewShortyForm(false);
                       }}
                     >
                       Create New Shorty

@@ -25,6 +25,8 @@ function App() {
 
   const [showShortenedUrl, setShowShortenedUrl] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
+  const [showNewShortyForm, setShowNewShortyForm] = useState(false);
+  const [linkTreeToggled, setLinkTreeToggled] = useState(false);
 
   const createGlobalLink = async (e) => {
     e.preventDefault();
@@ -72,6 +74,8 @@ function App() {
       const data = await response.json();
       setUserLink(data);
       setShowShortenedUrl(true);
+
+      setShowNewShortyForm(false);
     } catch (error) {
       console.error(error);
     }
@@ -131,6 +135,10 @@ function App() {
                 createUserLink={createUserLink}
                 handleUserLinkChange={handleUserLinkChange}
                 setNewGlobalLink={setNewGlobalLink}
+                showNewShortyForm={showNewShortyForm}
+                setShowNewShortyForm={setShowNewShortyForm}
+                linkTreeToggled={linkTreeToggled}
+                setLinkTreeToggled={setLinkTreeToggled}
               />
             }
           />
