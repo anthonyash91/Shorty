@@ -94,7 +94,7 @@ export default function HomePage({
                   id="register-button"
                   className="login-register"
                   onClick={() => {
-                    navigate("/dashboard");
+                    navigate("/u/dashboard");
                     setShowShortenedUrl(false);
                     setNewUserLink({ url: "" });
                   }}
