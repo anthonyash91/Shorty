@@ -332,7 +332,7 @@ export default function HomePage({
           {user ? (
             <>
               {user.name}, this link has been saved. To manage your links, visit
-              the <Link to="/dashboard">dashboard</Link>.
+              the <Link to="/u/dashboard">dashboard</Link>.
             </>
           ) : (
             <>
