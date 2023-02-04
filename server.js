@@ -38,15 +38,8 @@ app.get("/:shortUrl", async (req, res) => {
   res.redirect(shortUrl.url);
 });
 
-app.get("/*", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-
-app.get("/linkTree/:userId", async (req, res) => {
-  const user = await User.findOne({ userId: req.params.userId });
-  if (req.params.userId == null) return res.sendStatus(404);
-
-  res.send(user.linkTree);
 });
 
 app.listen(PORT, () => {

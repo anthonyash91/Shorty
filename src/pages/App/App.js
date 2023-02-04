@@ -117,7 +117,7 @@ function App() {
 
         {user ? (
           <Route
-            path="/dashboard"
+            path="/u/dashboard"
             element={
               <UserDashboard
                 user={user}
@@ -135,7 +135,7 @@ function App() {
             }
           />
         ) : (
-          <Route path="/dashboard" element={<Navigate to="/" />} />
+          <Route path="/u/dashboard" element={<Navigate to="/" />} />
         )}
       </Routes>
     </>
