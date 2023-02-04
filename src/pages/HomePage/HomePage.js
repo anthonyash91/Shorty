@@ -266,8 +266,8 @@ export default function HomePage({
             <input
               value={
                 user
-                  ? `http://shrl.io/${userLink.shortUrl}`
-                  : `http://shrl.io/${globalLink.shortUrl}`
+                  ? `https://shrl.io/${userLink.shortUrl}`
+                  : `https://shrl.io/${globalLink.shortUrl}`
               }
               className={showCopyMessage ? "highlighted" : ""}
               disabled
@@ -277,10 +277,10 @@ export default function HomePage({
                 {
                   user
                     ? navigator.clipboard.writeText(
-                        `http://shrl.io/${userLink.shortUrl}`
+                        `https://shrl.io/${userLink.shortUrl}`
                       )
                     : navigator.clipboard.writeText(
-                        `http://shrl.io/${globalLink.shortUrl}`
+                        `https://shrl.io/${globalLink.shortUrl}`
                       );
                 }
                 setShowCopyMessage(true);
