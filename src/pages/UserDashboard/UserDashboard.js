@@ -270,7 +270,8 @@ export default function UserDashboard({
                     Hey, <span>{user.name}</span>!
                   </div>
                   <div id="link-count">
-                    You have <b>{user?.links.length}</b> shorties saved.
+                    You have <b>{user?.links.length}</b>{" "}
+                    {user?.links.length === 1 ? "shorty" : "shorties"} saved.
                   </div>
                 </div>
               </div>
