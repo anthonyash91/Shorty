@@ -15,12 +15,11 @@ import UserDashboard from "../UserDashboard/UserDashboard";
 import HomePage from "../HomePage/HomePage";
 import LinkTree from "../LinkTree/LinkTree";
 
-const [domainName, setDomainName] = useState(
-  "https://shorty-url-ga.herokuapp.com/"
-);
-
 function App() {
   const [user, setUser] = useState(getUser());
+  const [domainName, setDomainName] = useState(
+    "https://shorty-url-ga.herokuapp.com/"
+  );
   const [globalLink, setGlobalLink] = useState({});
   const [newGlobalLink, setNewGlobalLink] = useState({
     url: "",
