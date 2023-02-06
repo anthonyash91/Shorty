@@ -36,7 +36,7 @@ export default function HomePage({
         <div id="nav-container" className="flex">
           <nav className="flex">
             <div id="logo" className="flex">
-              <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
+              <svg fill="#000000" viewBox="0 0 24 24">
                 <path
                   id="secondary"
                   d="M7.72,15.2c1.21.6,1.64,2.34,1,3.89s-2.2,2.31-3.4,1.71-1.64-2.34-1-3.89S6.52,14.6,7.72,15.2Zm1,3.89L16,3"
@@ -161,7 +161,7 @@ export default function HomePage({
                   });
                 }}
               >
-                <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
+                <svg fill="#000000" viewBox="0 0 24 24">
                   <line
                     id="secondary"
                     x1="8"
@@ -225,7 +225,7 @@ export default function HomePage({
                   });
                 }}
               >
-                <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
+                <svg fill="#000000" viewBox="0 0 24 24">
                   <line
                     id="secondary"
                     x1="8"
@@ -301,7 +301,7 @@ export default function HomePage({
                 }, 1000);
               }}
             >
-              <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
+              <svg fill="#000000" viewBox="0 0 24 24">
                 <path
                   id="primary"
                   d="M7,10V6A1,1,0,0,1,8,5h3"
@@ -374,7 +374,7 @@ export default function HomePage({
           <div id="feature-boxes" className="flex">
             <div className="feature-box flex">
               <div className="feature-icon">
-                <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
+                <svg fill="#000000" viewBox="0 0 24 24">
                   <path
                     id="secondary"
                     d="M3.29,16.09,8.2,21H11V18.2L6.09,13.29a1,1,0,0,0-1.4,0l-1.4,1.4A1,1,0,0,0,3.29,16.09Z"
@@ -431,7 +431,7 @@ export default function HomePage({
             </div>
             <div className="feature-box flex">
               <div className="feature-icon">
-                <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
+                <svg fill="#000000" viewBox="0 0 24 24">
                   <path
                     id="secondary"
                     d="M8,12h8M12,4V3M9,5,8,4m7,1,1-1M12,20v1M9,19,8,20m7-1,1,1"
@@ -585,11 +585,7 @@ export default function HomePage({
                     showQuestion === "What is a URL shortener" ? "open" : ""
                   }
                 >
-                  <svg
-                    fill="#000000"
-                    viewBox="0 0 24 24"
-                    class="icon line-color"
-                  >
+                  <svg fill="#000000" viewBox="0 0 24 24">
                     <path
                       id="secondary"
                       d="M11.84,10H4a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h7.84"
@@ -642,11 +638,7 @@ export default function HomePage({
                       : ""
                   }
                 >
-                  <svg
-                    fill="#000000"
-                    viewBox="0 0 24 24"
-                    class="icon line-color"
-                  >
+                  <svg fill="#000000" viewBox="0 0 24 24">
                     <path
                       id="secondary"
                       d="M11.84,10H4a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h7.84"
@@ -699,11 +691,7 @@ export default function HomePage({
                       : ""
                   }
                 >
-                  <svg
-                    fill="#000000"
-                    viewBox="0 0 24 24"
-                    class="icon line-color"
-                  >
+                  <svg fill="#000000" viewBox="0 0 24 24">
                     <path
                       id="secondary"
                       d="M11.84,10H4a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h7.84"
@@ -754,11 +742,7 @@ export default function HomePage({
                     showQuestion === "What is a Link-in-bio" ? "open" : ""
                   }
                 >
-                  <svg
-                    fill="#000000"
-                    viewBox="0 0 24 24"
-                    class="icon line-color"
-                  >
+                  <svg fill="#000000" viewBox="0 0 24 24">
                     <path
                       id="secondary"
                       d="M11.84,10H4a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h7.84"
@@ -811,11 +795,7 @@ export default function HomePage({
                       : ""
                   }
                 >
-                  <svg
-                    fill="#000000"
-                    viewBox="0 0 24 24"
-                    class="icon line-color"
-                  >
+                  <svg fill="#000000" viewBox="0 0 24 24">
                     <path
                       id="secondary"
                       d="M11.84,10H4a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h7.84"

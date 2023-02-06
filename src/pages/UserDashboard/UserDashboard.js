@@ -144,7 +144,7 @@ export default function UserDashboard({
                 setShowShortenedUrl(false);
               }}
             >
-              <svg fill="#000000" viewBox="0 0 24 24" class="icon line-color">
+              <svg fill="#000000" viewBox="0 0 24 24">
                 <path
                   id="secondary"
                   d="M7.72,15.2c1.21.6,1.64,2.34,1,3.89s-2.2,2.31-3.4,1.71-1.64-2.34-1-3.89S6.52,14.6,7.72,15.2Zm1,3.89L16,3"
@@ -216,11 +216,7 @@ export default function UserDashboard({
                   >
                     {({ onClick }) => (
                       <button onClick={onClick}>
-                        <svg
-                          fill="#000000"
-                          viewBox="0 0 24 24"
-                          class="icon line-color"
-                        >
+                        <svg fill="#000000" viewBox="0 0 24 24">
                           <path
                             id="secondary"
                             d="M8.71,10,3,15.73V19a1,1,0,0,0,1,1H8.29l5.2-5.2Zm7.58,2-8,8H20a1,1,0,0,0,1-1V16.71Z"
@@ -300,11 +296,7 @@ export default function UserDashboard({
                   <form onSubmit={createUserLink}>
                     <div className="form-section flex">
                       <div className="form-icon flex">
-                        <svg
-                          fill="#000000"
-                          viewBox="0 0 24 24"
-                          class="icon line-color"
-                        >
+                        <svg fill="#000000" viewBox="0 0 24 24">
                           <line
                             id="secondary"
                             x1="8"
@@ -355,11 +347,7 @@ export default function UserDashboard({
                     </div>
                     <div className="form-section last-section flex">
                       <div className="form-icon flex">
-                        <svg
-                          fill="#000000"
-                          viewBox="0 0 24 24"
-                          class="icon line-color"
-                        >
+                        <svg fill="#000000" viewBox="0 0 24 24">
                           <path
                             id="secondary"
                             d="M20.41,6.41,17.59,3.59a1,1,0,0,0-1.42,0L13.29,6.47l4.24,4.24,2.88-2.88A1,1,0,0,0,20.41,6.41Z"
@@ -482,11 +470,7 @@ export default function UserDashboard({
                                 }}
                               >
                                 <div className="form-icon flex">
-                                  <svg
-                                    fill="#000000"
-                                    viewBox="0 0 24 24"
-                                    class="icon line-color"
-                                  >
+                                  <svg fill="#000000" viewBox="0 0 24 24">
                                     <path
                                       id="secondary"
                                       d="M20.41,6.41,17.59,3.59a1,1,0,0,0-1.42,0L13.29,6.47l4.24,4.24,2.88-2.88A1,1,0,0,0,20.41,6.41Z"
@@ -589,7 +573,7 @@ export default function UserDashboard({
                                 showCopiedMessage === _id ? "copied" : ""
                               }
                             >
-                              {shortUrl}
+                              {title ? title : url}
                             </a>
 
                             <div className="copy-icon">
@@ -608,7 +592,6 @@ export default function UserDashboard({
                                 }
                                 fill="#000000"
                                 viewBox="0 0 24 24"
-                                class="icon line-color"
                               >
                                 <path
                                   id="primary"
@@ -656,9 +639,7 @@ export default function UserDashboard({
                           </div>
 
                           <div className="link-title flex">
-                            <div className="link-title-text">
-                              {title ? title : url}
-                            </div>
+                            <div className="link-title-text">{url}</div>
                           </div>
                         </div>
                         <div className="link-container-section buttons flex">
@@ -676,11 +657,7 @@ export default function UserDashboard({
                               setShowEditModal(_id);
                             }}
                           >
-                            <svg
-                              fill="#000000"
-                              viewBox="0 0 24 24"
-                              class="icon line-color"
-                            >
+                            <svg fill="#000000" viewBox="0 0 24 24">
                               <path
                                 id="secondary"
                                 d="M20.41,6.41,17.59,3.59a1,1,0,0,0-1.42,0L13.29,6.47l4.24,4.24,2.88-2.88A1,1,0,0,0,20.41,6.41Z"
@@ -782,11 +759,7 @@ export default function UserDashboard({
                             }}
                             className={showDeleteModal === _id ? "active" : ""}
                           >
-                            <svg
-                              fill="#000000"
-                              viewBox="0 0 24 24"
-                              class="icon line-color"
-                            >
+                            <svg fill="#000000" viewBox="0 0 24 24">
                               <path
                                 id="secondary"
                                 d="M16,7V4a1,1,0,0,0-1-1H9A1,1,0,0,0,8,4V7m2,4v6m4-6v6"
@@ -910,10 +883,20 @@ export default function UserDashboard({
                   );
                 })
                 .reverse()
-            : `You haven't saved any Shorties yet.`}
-          {user?.links.length === 0
-            ? `You haven't saved any Shorties yet.`
-            : ""}
+            : ``}
+          {user?.links.length === 0 ? (
+            <>
+              <div className="link-container flex">
+                <div className="link-container-inside flex">
+                  <div className="link-container-section jc">
+                    Hmm... it looks like you haven't saved any Shorties yet.
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
         </div>
       </div>
       <Footer />
