@@ -131,10 +131,10 @@ export default function HomePage({
           </nav>
         </div>
 
-        <h1>Link Size Matters...</h1>
+        <h1>Shorten Your URLs</h1>
         <h2>
-          Nobody likes a link that's too big. Impress your friends with one
-          that's the perfect size.
+          Have a link you want to share but it's too long? Use SHORTY to shorten
+          your URLs and make them easier to share with the world.
         </h2>
         {/* <img src="https://assets.codepen.io/8370674/Wave-6.3s-1704px.svg" /> */}
         <div id="form-container" className={showShortenedUrl ? "" : "hide"}>
