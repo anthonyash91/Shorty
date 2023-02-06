@@ -25,7 +25,7 @@ export default function LinkTree() {
   return (
     <>
       <div id="link-tree-bg" />
-      <div id="link-tree-container">
+      <div id="link-tree-container" className="flex">
         {userLinkTree.icon ? <img src={userLinkTree.icon} alt="icon" /> : ""}
         {userLinkTree.linkTree?.length
           ? userLinkTree.linkTree?.map((link, i) => {

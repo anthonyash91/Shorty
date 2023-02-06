@@ -589,7 +589,7 @@ export default function UserDashboard({
                                 showCopiedMessage === _id ? "copied" : ""
                               }
                             >
-                              {domainName}.io/{shortUrl}
+                              {shortUrl}
                             </a>
 
                             <div className="copy-icon">

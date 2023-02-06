@@ -1389,26 +1389,26 @@ footer a:hover {
   height: 100%;
   position: fixed;
   width: 100%;
+  z-index: 0;
 }
 
 #link-tree-container {
-  align-items: center;
   color: #fff;
-  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 30px;
-  /* height: 100vh; */
-  justify-content: center;
-  padding: 100px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 100px 0;
   position: relative;
-  width: 100%;
+  text-align: center;
   z-index: 1;
 }
 
 #link-tree-container img {
   border-radius: 8px;
-  margin-bottom: 30px;
+  display: inline-block;
+  margin: 0 auto;
   width: 200px;
 }
 
@@ -1427,10 +1427,11 @@ footer a:hover {
   background-color: rgba(0,0,0,.3);
   border-radius: 4px;
   color: #fff;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   /* margin-bottom: 30px; */
+  max-width: 100%;
   padding: 16px 20px;
   text-decoration: none;
   transition: .2s ease-in-out;
