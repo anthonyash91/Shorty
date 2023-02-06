@@ -16,7 +16,6 @@ export default function UserDashboard({
   createUserLink,
   handleUserLinkChange,
   setNewUserLink,
-  setNewGlobalLink,
   showNewShortyForm,
   setShowNewShortyForm,
   linkTreeToggled,
