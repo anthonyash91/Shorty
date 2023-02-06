@@ -8,6 +8,7 @@ import { HashLink } from "react-router-hash-link";
 
 export default function HomePage({
   user,
+  domainName,
   setUser,
   globalLink,
   createGlobalLink,
@@ -277,8 +278,8 @@ export default function HomePage({
             <input
               value={
                 user
-                  ? `https://shrl.io/${userLink.shortUrl}`
-                  : `https://shrl.io/${globalLink.shortUrl}`
+                  ? `${domainName}${userLink.shortUrl}`
+                  : `${domainName}${globalLink.shortUrl}`
               }
               className={showCopyMessage ? "highlighted" : ""}
               disabled
@@ -288,10 +289,10 @@ export default function HomePage({
                 {
                   user
                     ? navigator.clipboard.writeText(
-                        `https://shrl.io/${userLink.shortUrl}`
+                        `${domainName}${userLink.shortUrl}`
                       )
                     : navigator.clipboard.writeText(
-                        `https://shrl.io/${globalLink.shortUrl}`
+                        `${domainName}${globalLink.shortUrl}`
                       );
                 }
                 setShowCopyMessage(true);

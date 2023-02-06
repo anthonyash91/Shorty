@@ -15,6 +15,10 @@ import UserDashboard from "../UserDashboard/UserDashboard";
 import HomePage from "../HomePage/HomePage";
 import LinkTree from "../LinkTree/LinkTree";
 
+const [domainName, setDomainName] = useState(
+  "https://shorty-url-ga.herokuapp.com/"
+);
+
 function App() {
   const [user, setUser] = useState(getUser());
   const [globalLink, setGlobalLink] = useState({});
@@ -98,6 +102,7 @@ function App() {
           element={
             <HomePage
               user={user}
+              domainName={domainName}
               setUser={setUser}
               globalLink={globalLink}
               createGlobalLink={createGlobalLink}
@@ -125,6 +130,7 @@ function App() {
             element={
               <UserDashboard
                 user={user}
+                domainName={domainName}
                 setUser={setUser}
                 showShortenedUrl={showShortenedUrl}
                 setShowShortenedUrl={setShowShortenedUrl}

@@ -8,6 +8,7 @@ import QRCode from "react-qr-code";
 
 export default function UserDashboard({
   user,
+  domainName,
   setUser,
   setShowShortenedUrl,
   userLink,
@@ -582,7 +583,7 @@ export default function UserDashboard({
                           </div>
                           <div className="link-shortened flex">
                             <a
-                              href={`https://shrl.io/${shortUrl}`}
+                              href={`${domainName}${shortUrl}`}
                               target="_blank"
                               className={
                                 showCopiedMessage === _id ? "copied" : ""
