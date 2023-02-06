@@ -583,20 +583,20 @@ export default function UserDashboard({
                           </div>
                           <div className="link-shortened flex">
                             <a
-                              href={`${domainName}${shortUrl}`}
+                              href={`https://${domainName}/${shortUrl}`}
                               target="_blank"
                               className={
                                 showCopiedMessage === _id ? "copied" : ""
                               }
                             >
-                              shrl.io/{shortUrl}
+                              {domainName}.io/{shortUrl}
                             </a>
 
                             <div className="copy-icon">
                               <svg
                                 onClick={() => {
                                   navigator.clipboard.writeText(
-                                    `http://shrl.io/${shortUrl}`
+                                    `https://${domainName}/${shortUrl}`
                                   );
                                   setShowCopiedMessage(_id);
                                   setTimeout(() => {

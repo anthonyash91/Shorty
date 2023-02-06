@@ -278,8 +278,8 @@ export default function HomePage({
             <input
               value={
                 user
-                  ? `${domainName}${userLink.shortUrl}`
-                  : `${domainName}${globalLink.shortUrl}`
+                  ? `https://${domainName}/${userLink.shortUrl}`
+                  : `https://${domainName}/${globalLink.shortUrl}`
               }
               className={showCopyMessage ? "highlighted" : ""}
               disabled
@@ -289,10 +289,10 @@ export default function HomePage({
                 {
                   user
                     ? navigator.clipboard.writeText(
-                        `${domainName}${userLink.shortUrl}`
+                        `https://${domainName}/${userLink.shortUrl}`
                       )
                     : navigator.clipboard.writeText(
-                        `${domainName}${globalLink.shortUrl}`
+                        `https://${domainName}/${globalLink.shortUrl}`
                       );
                 }
                 setShowCopyMessage(true);
