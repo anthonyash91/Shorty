@@ -1522,14 +1522,14 @@ button {
   white-space: nowrap;
 }
 
-path, line, rect, circle, polygon {
+svg:not(.qr) path, svg:not(.qr) line, svg:not(.qr) rect, svg:not(.qr) circle, svg:not(.qr) polygon {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2;
 }
 
-path.path-white, line.path-white, rect.path-white, circle.path-white, polygon.path-white {
+svg:not(.qr) path.path-white, svg:not(.qr) line.path-white, svg:not(.qr) rect.path-white, svg:not(.qr) circle.path-white, svg:not(.qr) polygon.path-white {
   stroke: #fff;
 }
 

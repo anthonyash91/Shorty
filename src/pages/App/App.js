@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import { getUser } from "../../utilities/users-service";
 import UserDashboard from "../UserDashboard/UserDashboard";
@@ -41,8 +41,6 @@ function App() {
   const handleChange = (evt) => {
     setNewGlobalLink({ ...newGlobalLink, [evt.target.name]: evt.target.value });
   };
-
-  const navigate = useNavigate();
 
   const [userLink, setUserLink] = useState("");
   const [newUserLink, setNewUserLink] = useState({

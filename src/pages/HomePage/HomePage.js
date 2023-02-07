@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Header from "../../components/Header/Header";
-import Features from "../../components/Features/Features";
-import Faqs from "../../components/Faqs/Faqs";
-import SubFooter from "../../components/SubFooter/SubFooter";
+import Header from "../../components/HomePage/Header/Header";
+import Features from "../../components/HomePage/Features/Features";
+import Faqs from "../../components/HomePage/Faqs/Faqs";
+import SubFooter from "../../components/HomePage/SubFooter/SubFooter";
 import Footer from "../../components/Footer/Footer";
 
 export default function HomePage({

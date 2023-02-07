@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SignUpForm from "../../components/SignUpForm/SignUpForm";
-import { logOut } from "../../utilities/users-service";
+import SignUpForm from "../../../components/SignUpForm/SignUpForm";
+import { logOut } from "../../../utilities/users-service";
 import { Link } from "react-router-dom";
-import LoginForm from "../../components/LoginForm/LoginForm";
+import LoginForm from "../../../components/LoginForm/LoginForm";
 
 export default function Header({
   user,

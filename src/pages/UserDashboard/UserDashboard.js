@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import Header from "../../components/UserDashboard/Header";
 import Footer from "../../components/Footer/Footer";
-import { logOut } from "../../utilities/users-service";
-import { useNavigate } from "react-router-dom";
 import { Uploader } from "uploader";
 import { UploadButton } from "react-uploader";
 import QRCode from "react-qr-code";
@@ -32,8 +31,6 @@ export default function UserDashboard({
   const [showEditModal, setShowEditModal] = useState("");
   const [showDeleteModal, setShowDeleteModal] = useState("");
   const [newIcon, setNewIcon] = useState("");
-
-  const navigate = useNavigate();
 
   const getUser = async () => {
     try {
@@ -132,56 +129,11 @@ export default function UserDashboard({
 
   return (
     <>
-      <header id="dashboard" className="flex">
-        <div id="nav-container" className="flex">
-          <nav className="flex">
-            <div
-              id="logo"
-              className="flex"
-              onClick={() => {
-                navigate("/");
-                setShowShortenedUrl(false);
-              }}
-            >
-              <svg viewBox="0 0 24 24">
-                <path
-                  className="path-white"
-                  d="M7.72,15.2c1.21.6,1.64,2.34,1,3.89s-2.2,2.31-3.4,1.71-1.64-2.34-1-3.89S6.52,14.6,7.72,15.2Zm1,3.89L16,3"
-                ></path>
-                <path
-                  className="path-accent"
-                  d="M19.68,16.91c.68,1.55.25,3.29-1,3.89s-2.73-.17-3.4-1.71-.25-3.29,1-3.89S19,15.37,19.68,16.91ZM8,3l7.32,16.09"
-                ></path>
-              </svg>
-              SHORTY
-            </div>
-
-            <div id="user-buttons" className="flex">
-              <button
-                id="login-button"
-                className="login-register"
-                onClick={() => {
-                  logOut();
-                  setUser();
-                  navigate("/");
-                }}
-              >
-                Logout
-              </button>
-
-              <button
-                id="register-button"
-                className="login-register"
-                onClick={() => {
-                  navigate(`/u/${user.name}`);
-                }}
-              >
-                Link-In-Bio
-              </button>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <Header
+        user={user}
+        setUser={setUser}
+        setShowShortenedUrl={setShowShortenedUrl}
+      />
 
       <div id="user-dashboard-container" className="flex">
         <div className="link-container user flex">
@@ -363,7 +315,7 @@ export default function UserDashboard({
                   const { shortUrl, clicks, date, url, title, linkTree, _id } =
                     link;
                   return (
-                    <div className="link-container flex">
+                    <div className="link-container flex" key={i}>
                       <div className="link-container-inside flex">
                         <div
                           className={`modal-background ${
@@ -425,6 +377,7 @@ export default function UserDashboard({
                             <div className="delete-modal qr-modal">
                               <div className="qr-code">
                                 <QRCode
+                                  className="qr"
                                   size={180}
                                   style={{
                                     height: "auto",
@@ -553,15 +506,8 @@ export default function UserDashboard({
                                 d="M20.41,6.41,17.59,3.59a1,1,0,0,0-1.42,0L13.29,6.47l4.24,4.24,2.88-2.88A1,1,0,0,0,20.41,6.41Z"
                               ></path>
                               <polygon
-                                id="primary"
+                                className="path-white"
                                 points="10.47 9.29 14.71 13.53 7.24 21 3 21 3 16.76 10.47 9.29"
-                                style={{
-                                  fill: "none",
-                                  stroke: "#fff",
-                                  strokeLinecap: "round",
-                                  strokeLinejoin: "round",
-                                  strokeWidth: "2",
-                                }}
                               ></polygon>
                             </svg>
                           </button>
@@ -577,51 +523,20 @@ export default function UserDashboard({
                                 d="M13,11V7h4v4Zm4,6V15H15v2ZM7,13v4h4V13ZM7,7V9H9V7Z"
                               ></path>
                               <path
-                                id="primary"
+                                className="path-white"
                                 d="M21,8V4a1,1,0,0,0-1-1H16"
-                                style={{
-                                  fill: "none",
-                                  stroke: "#fff",
-                                  strokeLinecap: "round",
-                                  strokeLinejoin: "round",
-                                  strokeWidth: "2",
-                                }}
                               ></path>
                               <path
-                                id="primary-2"
-                                data-name="primary"
+                                className="path-white"
                                 d="M16,21h4a1,1,0,0,0,1-1V16"
-                                style={{
-                                  fill: "none",
-                                  stroke: "#fff",
-                                  strokeLinecap: "round",
-                                  strokeLinejoin: "round",
-                                  strokeWidth: "2",
-                                }}
                               ></path>
                               <path
-                                id="primary-3"
-                                data-name="primary"
+                                className="path-white"
                                 d="M8,3H4A1,1,0,0,0,3,4V8"
-                                style={{
-                                  fill: "none",
-                                  stroke: "#fff",
-                                  strokeLinecap: "round",
-                                  strokeLinejoin: "round",
-                                  strokeWidth: "2",
-                                }}
                               ></path>
                               <path
-                                id="primary-4"
-                                data-name="primary"
+                                className="path-white"
                                 d="M3,16v4a1,1,0,0,0,1,1H8"
-                                style={{
-                                  fill: "none",
-                                  stroke: "#fff",
-                                  strokeLinecap: "round",
-                                  strokeLinejoin: "round",
-                                  strokeWidth: "2",
-                                }}
                               ></path>
                             </svg>
                           </button>
@@ -637,15 +552,8 @@ export default function UserDashboard({
                                 d="M16,7V4a1,1,0,0,0-1-1H9A1,1,0,0,0,8,4V7m2,4v6m4-6v6"
                               ></path>
                               <path
-                                id="primary"
+                                className="path-white"
                                 d="M4,7H20M18,20V7H6V20a1,1,0,0,0,1,1H17A1,1,0,0,0,18,20Z"
-                                style={{
-                                  fill: "none",
-                                  stroke: "#fff",
-                                  strokeLinecap: "round",
-                                  strokeLinejoin: "round",
-                                  strokeWidth: "2",
-                                }}
                               ></path>
                             </svg>
                           </button>
@@ -660,26 +568,12 @@ export default function UserDashboard({
                             >
                               <svg viewBox="0 0 24 24">
                                 <path
-                                  id="primary"
+                                  className="path-primary"
                                   d="M16.74,12.17A3.66,3.66,0,0,1,17,13.5,3.5,3.5,0,0,1,13.5,17a3.45,3.45,0,0,1-1.5-.35,3.45,3.45,0,0,1-1.5.35A3.5,3.5,0,0,1,7,13.5a3.66,3.66,0,0,1,.26-1.33,3.48,3.48,0,0,1,.81-5.86,4,4,0,0,1,7.86,0,3.48,3.48,0,0,1,.81,5.86Z"
-                                  style={{
-                                    fill: "none",
-                                    stroke: "#0D2A3F",
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: "2",
-                                  }}
                                 ></path>
                                 <path
-                                  id="secondary"
+                                  className="path-white"
                                   d="M12,21V11M10,21h4"
-                                  style={{
-                                    fill: "none",
-                                    stroke: "#fff",
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: "2",
-                                  }}
                                 ></path>
                               </svg>
                             </button>
@@ -696,15 +590,8 @@ export default function UserDashboard({
                                   d="M16.74,12.17A3.66,3.66,0,0,1,17,13.5,3.5,3.5,0,0,1,13.5,17a3.45,3.45,0,0,1-1.5-.35,3.45,3.45,0,0,1-1.5.35A3.5,3.5,0,0,1,7,13.5a3.66,3.66,0,0,1,.26-1.33,3.48,3.48,0,0,1,.81-5.86,4,4,0,0,1,7.86,0,3.48,3.48,0,0,1,.81,5.86Z"
                                 ></path>
                                 <path
-                                  id="secondary"
+                                  className="path-white"
                                   d="M12,21V11M10,21h4"
-                                  style={{
-                                    fill: "none",
-                                    stroke: "#fff",
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: "2",
-                                  }}
                                 ></path>
                               </svg>
                             </button>
