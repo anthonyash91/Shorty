@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import FaqDeleteButton from "./FaqDeleteButton";
+import FaqExpandButton from "./FaqExpandButton";
 import FaqForm from "./FaqForm";
 
 export default function Faqs({ user }) {
@@ -52,35 +54,16 @@ export default function Faqs({ user }) {
                 <div>
                   {faq.question}
                   {user?._id === "63dd727d39443928028adf8a" ? (
-                    <span
-                      className="delete-faq"
-                      onClick={() => {
-                        deleteFaq(_id);
-                      }}
-                    >
-                      Delete FAQ
-                    </span>
+                    <FaqDeleteButton deleteFaq={deleteFaq} id={_id} />
                   ) : (
                     ""
                   )}
                 </div>
-                <button
-                  onClick={() => {
-                    setShowQuestion(question);
-                  }}
-                  className={showQuestion === question ? "open" : ""}
-                >
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      className="path-white"
-                      d="M11.84,10H4a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h7.84"
-                    ></path>
-                    <path
-                      className="path-accent"
-                      d="M11.84,14l-.79,2.66a1,1,0,0,0,1.41,1.2l8.06-5a1.07,1.07,0,0,0,0-1.78l-8.06-5a1,1,0,0,0-1.41,1.2L11.84,10"
-                    ></path>
-                  </svg>
-                </button>
+                <FaqExpandButton
+                  setShowQuestion={setShowQuestion}
+                  question={question}
+                  showQuestion={showQuestion}
+                />
               </div>
               <div className="answer">{answer}</div>
             </div>
