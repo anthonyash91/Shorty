@@ -477,6 +477,7 @@ main {
   align-items: center;
   font-size: 40px;
   font-weight: 700;
+  gap: 40px;
   justify-content: space-between;
   line-height: 56px;
   width: 60%;
@@ -488,7 +489,6 @@ main {
 
 #convinced-container button {
   font-size: 26px;
-  margin-left: 20px;
   padding: 20px 35px;
   white-space: nowrap;
 }
@@ -1481,4 +1481,19 @@ footer a:hover {
 
 button {
   white-space: nowrap;
+}
+
+path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+path.path-white {
+  stroke: #fff;
+}
+
+path.path-accent {
+  stroke: var(--accent-color);
 }

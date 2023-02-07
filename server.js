@@ -21,6 +21,7 @@ app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
 app.use(express.static(path.join(__dirname, "build")));
 
 app.use("/api/links", require("./routes/api/links"));
+app.use("/api/faqs", require("./routes/api/faqs"));
 
 app.use(require("./config/checkToken"));
 /*
