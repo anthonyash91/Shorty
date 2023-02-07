@@ -1,17 +1,14 @@
-import { HashLink } from "react-router-hash-link";
+import FeaturesExplaination from "./FeaturesExplaination";
+import FeatureBox from "./FeatureBox";
 
 export default function Features({ user, setShowRegister }) {
   return (
     <div id="features" className="flex">
-      <div id="features-explaination">
-        <span>Sharing is now easier than ever.</span>
-        <br />
-        Shorty has all the features you need to connect with your friends,
-        social media followers, or even the world.
-      </div>
+      <FeaturesExplaination />
+
       <div id="feature-boxes" className="flex">
-        <div className="feature-box flex">
-          <div className="feature-icon">
+        <FeatureBox
+          icon={
             <svg viewBox="0 0 24 24">
               <path
                 className="path-primary"
@@ -23,25 +20,16 @@ export default function Features({ user, setShowRegister }) {
               ></path>
               <circle className="path-white" cx="13" cy="8" r="5"></circle>
             </svg>
-          </div>
-          <div className="feature-title">Link-in-bio</div>Personalized
-          Link-in-bios make sharing links with friends easy.
-          {user ? (
-            ""
-          ) : (
-            <HashLink
-              smooth
-              to="#"
-              onClick={() => {
-                setShowRegister(true);
-              }}
-            >
-              <button>Sign Up Now!</button>
-            </HashLink>
-          )}
-        </div>
-        <div className="feature-box flex">
-          <div className="feature-icon">
+          }
+          featureTitle="Link-In-Bio"
+          featureDescription="Personalized
+          Link-in-bios make sharing links with friends easy."
+          user={user}
+          setShowRegister={setShowRegister}
+        />
+
+        <FeatureBox
+          icon={
             <svg viewBox="0 0 24 24">
               <path
                 className="path-primary"
@@ -56,25 +44,15 @@ export default function Features({ user, setShowRegister }) {
                 d="M14,15a1,1,0,0,0,1,1h5a1,1,0,0,0,1-1V9a1,1,0,0,0-1-1H15a1,1,0,0,0-1,1"
               ></path>
             </svg>
-          </div>
-          <div className="feature-title">Link Management</div>
-          Save, track, and organize your links in one convenient place.
-          {user ? (
-            ""
-          ) : (
-            <HashLink
-              smooth
-              to="#"
-              onClick={() => {
-                setShowRegister(true);
-              }}
-            >
-              <button>Sign Up Now!</button>
-            </HashLink>
-          )}
-        </div>
-        <div className="feature-box flex">
-          <div className="feature-icon">
+          }
+          featureTitle="Link Management"
+          featureDescription="Save, track, and organize your links in one convenient place."
+          user={user}
+          setShowRegister={setShowRegister}
+        />
+
+        <FeatureBox
+          icon={
             <svg viewBox="0 0 24 24">
               <path
                 className="path-primary"
@@ -85,23 +63,12 @@ export default function Features({ user, setShowRegister }) {
               <path className="path-white" d="M8,3H4A1,1,0,0,0,3,4V8"></path>
               <path className="path-white" d="M3,16v4a1,1,0,0,0,1,1H8"></path>
             </svg>
-          </div>
-          <div className="feature-title">QR Codes</div>
-          Individual QR codes make sharing your links even easier.
-          {user ? (
-            ""
-          ) : (
-            <HashLink
-              smooth
-              to="#"
-              onClick={() => {
-                setShowRegister(true);
-              }}
-            >
-              <button>Sign Up Now!</button>
-            </HashLink>
-          )}
-        </div>
+          }
+          featureTitle="QR Codes"
+          featureDescription="Individual QR codes make sharing your links even easier."
+          user={user}
+          setShowRegister={setShowRegister}
+        />
       </div>
     </div>
   );

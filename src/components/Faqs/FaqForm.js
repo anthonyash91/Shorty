@@ -44,17 +44,18 @@ export default function FaqForm({ user, getFaqs }) {
                 name="question"
                 value={newFaqContent.question}
                 onChange={handleFaqChange}
-                placeholder="Paste your URL here..."
+                placeholder="Question"
                 required
               />
             </div>
             <div className="form-section last-section flex">
-              <input
+              <textarea
                 type="text"
                 name="answer"
                 value={newFaqContent.answer}
                 onChange={handleFaqChange}
-                placeholder="Link description (optional)"
+                placeholder="Answer"
+                className="input-answer"
               />
             </div>
 

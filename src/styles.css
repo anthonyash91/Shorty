@@ -128,7 +128,8 @@ nav button.login-register,
 .new-shorty,
 .delete-modal button,
 .feature-box button,
-#convinced-container button {
+#convinced-container button, 
+#faqs form button {
   border: 1px solid rgba(0,0,0,.1)!important;
   border-radius: 4px;
   font-weight: 700;
@@ -179,13 +180,14 @@ nav #register-button.active,
 .new-shorty,
 .delete-modal button,
 .feature-box button,
-#convinced-container button {
+#convinced-container button,
+#faqs form button {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: #fff;
 }
 
-nav button:active, .new-shorty:active, .new-shorty-form button:active, .delete-modal button:active {
+nav button:active, .new-shorty:active, .new-shorty-form button:active, .delete-modal button:active, #faqs form button:active {
   transform: translateY(2px);
 }
 
@@ -479,6 +481,24 @@ main {
   display: block;
   max-height: 500px;
   overflow: visible;
+}
+
+#faqs form {
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin-bottom: 30px;
+  padding-top: 35px;
+}
+
+#faqs input, #faqs textarea {
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  width: 400px;
+}
+
+#faqs textarea.input-answer {
+  height: 200px;
 }
 
 #new-shorty-container {
