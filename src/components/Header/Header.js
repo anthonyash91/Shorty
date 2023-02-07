@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import { logOut } from "../../utilities/users-service";
@@ -33,28 +33,14 @@ export default function Header({
       <div id="nav-container" className="flex">
         <nav className="flex">
           <div id="logo" className="flex">
-            <svg fill="#000000" viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24">
               <path
-                id="secondary"
+                className="path-white"
                 d="M7.72,15.2c1.21.6,1.64,2.34,1,3.89s-2.2,2.31-3.4,1.71-1.64-2.34-1-3.89S6.52,14.6,7.72,15.2Zm1,3.89L16,3"
-                style={{
-                  fill: "none",
-                  stroke: "#fff",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                }}
               ></path>
               <path
-                id="primary"
+                className="path-accent"
                 d="M19.68,16.91c.68,1.55.25,3.29-1,3.89s-2.73-.17-3.4-1.71-.25-3.29,1-3.89S19,15.37,19.68,16.91ZM8,3l7.32,16.09"
-                style={{
-                  fill: "none",
-                  stroke: "#18DA8E",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                }}
               ></path>
             </svg>
             SHORTY
@@ -133,7 +119,7 @@ export default function Header({
         Have a link you want to share but it's too long? Use SHORTY to shorten
         your URLs and make them easier to share with the world.
       </h2>
-      {/* <img src="https://assets.codepen.io/8370674/Wave-6.3s-1704px.svg" /> */}
+
       <div id="form-container" className={showShortenedUrl ? "" : "hide"}>
         {user ? (
           <form onSubmit={createUserLink} className="flex">
@@ -158,43 +144,21 @@ export default function Header({
                 });
               }}
             >
-              <svg fill="#000000" viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24">
                 <line
-                  id="secondary"
+                  className="path-accent"
                   x1="8"
                   y1="12"
                   x2="16"
                   y2="12"
-                  style={{
-                    fill: "none",
-                    stroke: "#18DA8E",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2",
-                  }}
                 ></line>
                 <path
-                  id="primary"
+                  className="path-white"
                   d="M10,9A1,1,0,0,0,9,8H4A1,1,0,0,0,3,9v6a1,1,0,0,0,1,1H9a1,1,0,0,0,1-1"
-                  style={{
-                    fill: "none",
-                    stroke: "#fff",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2",
-                  }}
                 ></path>
                 <path
-                  id="primary-2"
-                  data-name="primary"
+                  className="path-white"
                   d="M14,15a1,1,0,0,0,1,1h5a1,1,0,0,0,1-1V9a1,1,0,0,0-1-1H15a1,1,0,0,0-1,1"
-                  style={{
-                    fill: "none",
-                    stroke: "#fff",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2",
-                  }}
                 ></path>
               </svg>
             </button>
@@ -222,43 +186,21 @@ export default function Header({
                 });
               }}
             >
-              <svg fill="#000000" viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24">
                 <line
-                  id="secondary"
+                  className="path-accent"
                   x1="8"
                   y1="12"
                   x2="16"
                   y2="12"
-                  style={{
-                    fill: "none",
-                    stroke: "#18DA8E",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2",
-                  }}
                 ></line>
                 <path
-                  id="primary"
+                  className="path-white"
                   d="M10,9A1,1,0,0,0,9,8H4A1,1,0,0,0,3,9v6a1,1,0,0,0,1,1H9a1,1,0,0,0,1-1"
-                  style={{
-                    fill: "none",
-                    stroke: "#fff",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2",
-                  }}
                 ></path>
                 <path
-                  id="primary-2"
-                  data-name="primary"
+                  className="path-white"
                   d="M14,15a1,1,0,0,0,1,1h5a1,1,0,0,0,1-1V9a1,1,0,0,0-1-1H15a1,1,0,0,0-1,1"
-                  style={{
-                    fill: "none",
-                    stroke: "#fff",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2",
-                  }}
                 ></path>
               </svg>
             </button>
@@ -298,40 +240,15 @@ export default function Header({
               }, 1000);
             }}
           >
-            <svg fill="#000000" viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24">
+              <path className="path-white" d="M7,10V6A1,1,0,0,1,8,5h3"></path>
               <path
-                id="primary"
-                d="M7,10V6A1,1,0,0,1,8,5h3"
-                style={{
-                  fill: "none",
-                  stroke: "#fff",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                }}
-              ></path>
-              <path
-                id="primary-2"
-                data-name="primary"
+                className="path-white"
                 d="M17,5h3a1,1,0,0,1,1,1V20a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V16"
-                style={{
-                  fill: "none",
-                  stroke: "#fff",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                }}
               ></path>
               <path
-                id="secondary"
+                className="path-accent"
                 d="M11,7h6V4a1,1,0,0,0-1-1H12a1,1,0,0,0-1,1ZM3.29,12.09,8.2,17H11V14.2L6.09,9.29a1,1,0,0,0-1.4,0l-1.4,1.4A1,1,0,0,0,3.29,12.09Z"
-                style={{
-                  fill: "none",
-                  stroke: "#18DA8E",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                }}
               ></path>
             </svg>
           </button>

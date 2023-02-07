@@ -417,11 +417,29 @@ main {
 .question {
   align-items: center;
   color: #fff;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.question div {
+  align-items: center;
+  display: flex;
   font-size: 24px;
   font-weight: 700;
-  justify-content: space-between;
+  gap: 20px;
   line-height: 30px;
-  margin-bottom: 5px;
+}
+
+.question span {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 5px 10px 5px 10px;
+}
+
+.question span:active {
+  transform: translateY(2px);
 }
 
 .faq-container .question button {
@@ -450,6 +468,7 @@ main {
 }
 
 .answer {
+  line-height: 30px;
   max-height: 0;
   overflow: hidden;
   transition: .2s ease-in-out;
@@ -1483,17 +1502,21 @@ button {
   white-space: nowrap;
 }
 
-path {
+path, line, rect, circle, polygon {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2;
 }
 
-path.path-white {
+path.path-white, line.path-white, rect.path-white, circle.path-white, polygon.path-white {
   stroke: #fff;
 }
 
-path.path-accent {
+path.path-primary, line.path-primary, rect.path-primary, circle.path-primary, polygon.path-primary {
+  stroke: var(--primary-color);
+}
+
+path.path-accent, line.path-accent, rect.path-accent, circle.path-accent, polygon.path-accent {
   stroke: var(--accent-color);
 }

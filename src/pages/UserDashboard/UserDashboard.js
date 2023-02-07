@@ -143,28 +143,14 @@ export default function UserDashboard({
                 setShowShortenedUrl(false);
               }}
             >
-              <svg fill="#000000" viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24">
                 <path
-                  id="secondary"
+                  className="path-white"
                   d="M7.72,15.2c1.21.6,1.64,2.34,1,3.89s-2.2,2.31-3.4,1.71-1.64-2.34-1-3.89S6.52,14.6,7.72,15.2Zm1,3.89L16,3"
-                  style={{
-                    fill: "none",
-                    stroke: "#fff",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2",
-                  }}
                 ></path>
                 <path
-                  id="primary"
+                  className="path-accent"
                   d="M19.68,16.91c.68,1.55.25,3.29-1,3.89s-2.73-.17-3.4-1.71-.25-3.29,1-3.89S19,15.37,19.68,16.91ZM8,3l7.32,16.09"
-                  style={{
-                    fill: "none",
-                    stroke: "#18DA8E",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2",
-                  }}
                 ></path>
               </svg>
               SHORTY
@@ -215,46 +201,25 @@ export default function UserDashboard({
                   >
                     {({ onClick }) => (
                       <button onClick={onClick}>
-                        <svg fill="#000000" viewBox="0 0 24 24">
+                        <svg viewBox="0 0 24 24">
                           <path
-                            id="secondary"
+                            className="path-accent"
                             d="M8.71,10,3,15.73V19a1,1,0,0,0,1,1H8.29l5.2-5.2Zm7.58,2-8,8H20a1,1,0,0,0,1-1V16.71Z"
-                            style={{
-                              fill: "none",
-                              stroke: "#18DA8E",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              strokeWidth: "2",
-                            }}
                           ></path>
                           <line
-                            id="secondary-upstroke"
+                            className="path-accent"
                             x1="13.92"
                             y1="8.29"
                             x2="13.82"
                             y2="8.29"
-                            style={{
-                              fill: "none",
-                              stroke: "#18DA8E",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              strokeWidth: "2",
-                            }}
                           ></line>
                           <rect
-                            id="primary"
+                            className="path-white"
                             x="3"
                             y="4"
                             width="18"
                             height="16"
                             rx="1"
-                            style={{
-                              fill: "none",
-                              stroke: "#fff",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              strokeWidth: "2",
-                            }}
                           ></rect>
                         </svg>
                       </button>
@@ -295,43 +260,21 @@ export default function UserDashboard({
                   <form onSubmit={createUserLink}>
                     <div className="form-section flex">
                       <div className="form-icon flex">
-                        <svg fill="#000000" viewBox="0 0 24 24">
+                        <svg viewBox="0 0 24 24">
                           <line
-                            id="secondary"
+                            className="path-accent"
                             x1="8"
                             y1="12"
                             x2="16"
                             y2="12"
-                            style={{
-                              fill: "none",
-                              stroke: "#18DA8E",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              strokeWidth: "2",
-                            }}
                           ></line>
                           <path
-                            id="primary"
+                            className="path-white"
                             d="M10,9A1,1,0,0,0,9,8H4A1,1,0,0,0,3,9v6a1,1,0,0,0,1,1H9a1,1,0,0,0,1-1"
-                            style={{
-                              fill: "none",
-                              stroke: "#fff",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              strokeWidth: "2",
-                            }}
                           ></path>
                           <path
-                            id="primary-2"
-                            data-name="primary"
+                            className="path-white"
                             d="M14,15a1,1,0,0,0,1,1h5a1,1,0,0,0,1-1V9a1,1,0,0,0-1-1H15a1,1,0,0,0-1,1"
-                            style={{
-                              fill: "none",
-                              stroke: "#fff",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              strokeWidth: "2",
-                            }}
                           ></path>
                         </svg>
                       </div>
@@ -346,28 +289,14 @@ export default function UserDashboard({
                     </div>
                     <div className="form-section last-section flex">
                       <div className="form-icon flex">
-                        <svg fill="#000000" viewBox="0 0 24 24">
+                        <svg viewBox="0 0 24 24">
                           <path
-                            id="secondary"
+                            className="path-accent"
                             d="M20.41,6.41,17.59,3.59a1,1,0,0,0-1.42,0L13.29,6.47l4.24,4.24,2.88-2.88A1,1,0,0,0,20.41,6.41Z"
-                            style={{
-                              fill: "none",
-                              stroke: "#18DA8E",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              strokeWidth: "2",
-                            }}
                           ></path>
                           <polygon
-                            id="primary"
+                            className="path-white"
                             points="10.47 9.29 14.71 13.53 7.24 21 3 21 3 16.76 10.47 9.29"
-                            style={{
-                              fill: "none",
-                              stroke: "#fff",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              strokeWidth: "2",
-                            }}
                           ></polygon>
                         </svg>
                       </div>
@@ -407,7 +336,6 @@ export default function UserDashboard({
                     </div>
 
                     <button
-                      // className={newUserLink.url ? "" : "disabled"}
                       onClick={() => {
                         setNewUserLink({
                           ...newUserLink,
@@ -469,28 +397,14 @@ export default function UserDashboard({
                                 }}
                               >
                                 <div className="form-icon flex">
-                                  <svg fill="#000000" viewBox="0 0 24 24">
+                                  <svg viewBox="0 0 24 24">
                                     <path
-                                      id="secondary"
+                                      className="path-accent"
                                       d="M20.41,6.41,17.59,3.59a1,1,0,0,0-1.42,0L13.29,6.47l4.24,4.24,2.88-2.88A1,1,0,0,0,20.41,6.41Z"
-                                      style={{
-                                        fill: "none",
-                                        stroke: "#18DA8E",
-                                        strokeLinecap: "round",
-                                        strokeLinejoin: "round",
-                                        strokeWidth: "2",
-                                      }}
                                     ></path>
                                     <polygon
-                                      id="primary"
+                                      className="path-white"
                                       points="10.47 9.29 14.71 13.53 7.24 21 3 21 3 16.76 10.47 9.29"
-                                      style={{
-                                        fill: "none",
-                                        stroke: "#fff",
-                                        strokeLinecap: "round",
-                                        strokeLinejoin: "round",
-                                        strokeWidth: "2",
-                                      }}
                                     ></polygon>
                                   </svg>
                                 </div>
@@ -589,42 +503,19 @@ export default function UserDashboard({
                                 className={
                                   showCopiedMessage === _id ? "copied" : ""
                                 }
-                                fill="#000000"
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  id="primary"
+                                  className="path-primary"
                                   d="M7,10V6A1,1,0,0,1,8,5h3"
-                                  style={{
-                                    fill: "none",
-                                    stroke: "#0D2A3F",
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: "2",
-                                  }}
                                 ></path>
                                 <path
-                                  id="primary-2"
-                                  data-name="primary"
+                                  className="path-primary"
                                   d="M17,5h3a1,1,0,0,1,1,1V20a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V16"
-                                  style={{
-                                    fill: "none",
-                                    stroke: "#0D2A3F",
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: "2",
-                                  }}
                                 ></path>
                                 <path
-                                  id="secondary"
+                                  className="path-accent"
                                   d="M11,7h6V4a1,1,0,0,0-1-1H12a1,1,0,0,0-1,1ZM3.29,12.09,8.2,17H11V14.2L6.09,9.29a1,1,0,0,0-1.4,0l-1.4,1.4A1,1,0,0,0,3.29,12.09Z"
-                                  style={{
-                                    fill: "none",
-                                    stroke: "#18DA8E",
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: "2",
-                                  }}
                                 ></path>
                               </svg>
                               <div
@@ -656,17 +547,10 @@ export default function UserDashboard({
                               setShowEditModal(_id);
                             }}
                           >
-                            <svg fill="#000000" viewBox="0 0 24 24">
+                            <svg viewBox="0 0 24 24">
                               <path
-                                id="secondary"
+                                className="path-accent"
                                 d="M20.41,6.41,17.59,3.59a1,1,0,0,0-1.42,0L13.29,6.47l4.24,4.24,2.88-2.88A1,1,0,0,0,20.41,6.41Z"
-                                style={{
-                                  fill: "none",
-                                  stroke: "#18DA8E",
-                                  strokeLinecap: "round",
-                                  strokeLinejoin: "round",
-                                  strokeWidth: "2",
-                                }}
                               ></path>
                               <polygon
                                 id="primary"
@@ -687,21 +571,10 @@ export default function UserDashboard({
                             }}
                             className={showQrModal === _id ? "active" : ""}
                           >
-                            <svg
-                              fill="#000000"
-                              viewBox="0 0 24 24"
-                              id="qr-code-scan"
-                            >
+                            <svg viewBox="0 0 24 24">
                               <path
-                                id="secondary"
+                                className="path-accent"
                                 d="M13,11V7h4v4Zm4,6V15H15v2ZM7,13v4h4V13ZM7,7V9H9V7Z"
-                                style={{
-                                  fill: "none",
-                                  stroke: "#18DA8E",
-                                  strokeLinecap: "round",
-                                  strokeLinejoin: "round",
-                                  strokeWidth: "2",
-                                }}
                               ></path>
                               <path
                                 id="primary"
@@ -758,17 +631,10 @@ export default function UserDashboard({
                             }}
                             className={showDeleteModal === _id ? "active" : ""}
                           >
-                            <svg fill="#000000" viewBox="0 0 24 24">
+                            <svg viewBox="0 0 24 24">
                               <path
-                                id="secondary"
+                                className="path-accent"
                                 d="M16,7V4a1,1,0,0,0-1-1H9A1,1,0,0,0,8,4V7m2,4v6m4-6v6"
-                                style={{
-                                  fill: "none",
-                                  stroke: "#18DA8E",
-                                  strokeLinecap: "round",
-                                  strokeLinejoin: "round",
-                                  strokeWidth: "2",
-                                }}
                               ></path>
                               <path
                                 id="primary"
@@ -826,15 +692,8 @@ export default function UserDashboard({
                             >
                               <svg viewBox="0 0 24 24">
                                 <path
-                                  id="primary"
+                                  className="path-accent"
                                   d="M16.74,12.17A3.66,3.66,0,0,1,17,13.5,3.5,3.5,0,0,1,13.5,17a3.45,3.45,0,0,1-1.5-.35,3.45,3.45,0,0,1-1.5.35A3.5,3.5,0,0,1,7,13.5a3.66,3.66,0,0,1,.26-1.33,3.48,3.48,0,0,1,.81-5.86,4,4,0,0,1,7.86,0,3.48,3.48,0,0,1,.81,5.86Z"
-                                  style={{
-                                    fill: "none",
-                                    stroke: "#18DA8E",
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: "2",
-                                  }}
                                 ></path>
                                 <path
                                   id="secondary"

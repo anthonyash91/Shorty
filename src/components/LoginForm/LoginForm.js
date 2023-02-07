@@ -39,32 +39,18 @@ export default function LoginForm({
       <form autoComplete="off" onSubmit={handleSubmit}>
         <div className="form-section flex">
           <div className="form-icon flex">
-            <svg fill="#000000" viewBox="0 0 24 24" id="mail">
+            <svg viewBox="0 0 24 24">
               <rect
-                id="primary"
+                className="path-accent"
                 x="3"
                 y="5"
                 width="18"
                 height="14"
                 rx="1"
-                style={{
-                  fill: "none",
-                  stroke: "#18DA8E",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                }}
               ></rect>
               <path
-                id="secondary"
+                className="path-white"
                 d="M21,6V8l-9,5L3,8V6A1,1,0,0,1,4,5H20A1,1,0,0,1,21,6Z"
-                style={{
-                  fill: "none",
-                  stroke: "#fff",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                }}
               ></path>
             </svg>
           </div>
@@ -79,32 +65,18 @@ export default function LoginForm({
         </div>
         <div className="form-section last-section flex">
           <div className="form-icon flex">
-            <svg fill="#000000" viewBox="0 0 24 24" id="lock-1">
+            <svg viewBox="0 0 24 24">
               <path
-                id="secondary"
+                className="path-accent"
                 d="M16,9V7a4,4,0,0,0-4-4h0A4,4,0,0,0,8,7V9"
-                style={{
-                  fill: "none",
-                  stroke: "#18DA8E",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                }}
               ></path>
               <rect
-                id="primary"
+                className="path-white"
                 x="5"
                 y="9"
                 width="14"
                 height="12"
                 rx="1"
-                style={{
-                  fill: "none",
-                  stroke: "#fff",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                }}
               ></rect>
             </svg>
           </div>

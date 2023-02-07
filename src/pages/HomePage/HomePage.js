@@ -48,7 +48,7 @@ export default function HomePage({
 
       <main>
         <Features user={user} setShowRegister={setShowRegister} />
-        <Faqs />
+        <Faqs user={user} />
         <SubFooter user={user} setShowRegister={setShowRegister} />
       </main>
 

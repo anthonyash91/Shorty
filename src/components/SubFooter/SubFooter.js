@@ -5,7 +5,7 @@ export default function SubFooter({ user, setShowRegister }) {
     <div id="convinced" className="flex">
       <div id="convinced-container" className={`flex ${user ? "user" : ""}`}>
         {user ? (
-          "Thanks for being a Shorty, Shorty."
+          `Thanks for being a Shorty, ${user.name}.`
         ) : (
           <>
             Join our community and become a Shorty.
