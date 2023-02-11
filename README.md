@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# SHORTY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [https://shorty-url-ga.herokuapp.com/](Deployed App)
 
-## Available Scripts
+# Introduction:
 
-In the project directory, you can run:
+Shorty is a URL shortener tool that takes a long and complex URL and converts it into a shorter, more manageable URL. This shortened URL can then be shared and used instead of the original, long URL. The purpose of a URL shortener is to save space and make sharing links more convenient, particularly on platforms with character limits such as Twitter. When someone clicks on the shortened URL, they are redirected to the original, longer URL. Some popular URL shortening services include Bitly, TinyURL, and Google.
 
-### `npm start`
+There are several benefits to using a short URL:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Space-saving: Short URLs take up less space, especially in places with character limits such as social media platforms, making them easier to share and promoting more engagement.
+2. Branding: Short URLs can be customized with a brand name or keyword, making it easier to remember and promoting brand recognition.
+3. Tracking and Analytics: Many URL shortening services offer tracking and analytics, providing insight into how many clicks a link is receiving, where the clicks are coming from, and other useful information.
+4. Masking: Short URLs can hide the destination of a link, making it more difficult for phishing scams and other malicious actors to deceive users.
+5. Mobile compatibility: Short URLs can be more mobile-friendly, as they are easier to type or click on smaller screens.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Overall, using a short URL can make sharing and promoting links more convenient, easier to remember, and provide valuable insights for marketers and website owners.
 
-### `npm test`
+# Technologies Used:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Visual Sutdio Code
+- Mongo DB
+- Postman
+- React
+- Javascript
+- CSS
+- Express
+- dotenv
+- Mongoose
+- bcrypt
+- react-router-dom
+- react-scripts
+- JWS Tocken /Ajax
+- Figma
+- Lucid
+- Trello
 
-### `npm run build`
+## Low Fidelity Wireframes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Wireframe](https://www.figma.com/file/jvfxtQvrHaAasDKCLaA8P0/Bitly?node-id=0%3A1&t=AVtKmAf2Jc8hSJg5-0)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Figma](https://raw.githubusercontent.com/rpena124/bitly/dev/public/figma-home.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ERD Diagrams
 
-### `npm run eject`
+[ERD](https://lucid.app/lucidchart/c039ad48-844f-4ec7-a0ec-915984ccca6a/edit?page=0_0&invitationId=inv_5727775a-102f-465a-aea4-508755e28f33#)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### OG Diagram
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![ERD](https://github.com/rpena124/bitly/raw/dev/public/ERD.jpeg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Finalized Diagram
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Final ERD](https://camo.githubusercontent.com/dde16bc3a66b236e3650db480b2c3188b40245875dea22a0ba1f4cca11dc0602/68747470733a2f2f692e696d6775722e636f6d2f43686b653573332e706e67)
 
-## Learn More
+## Project Management
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Trello](https://trello.com/b/qE5MKKid/bitly)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Trello](/public/trello.png)
 
-### Code Splitting
+[Heroku](...)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Installation
 
-### Analyzing the Bundle Size
+To set up your environment, open your terminal use npm i to install all dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    npm i
 
-### Making a Progressive Web App
+Be sure to create a build folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    npm run build
 
-### Advanced Configuration
+# Collaborators:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Melissa Alzate -
+  [LinkedIn](https://www.linkedin.com/in/ma867/)
+- Anthony Ashcraft - [LinkedIn](https://www.linkedin.com/in/anthonyashcraft/)
+- Anthony (Tony) Ingianni - [LinkedIn](https://www.linkedin.com/in/anthony-i-software-engineer/)
+- Rosa Peña - [LinkedIn](https://www.linkedin.com/in/rpe%C3%B1a/)
