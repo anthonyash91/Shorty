@@ -57,9 +57,7 @@ Overall, using a short URL can make sharing and promoting links more convenient,
 
 [Trello](https://trello.com/b/qE5MKKid/bitly)
 
-![Trello](/public/trello.png)
-
-[Heroku](...)
+![Trello](https://github.com/rpena124/bitly/raw/dev/public/trello.png)
 
 # Installation
 
