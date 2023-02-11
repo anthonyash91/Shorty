@@ -1,9 +1,10 @@
-// import { Component } from "react";
 import { signUp } from "../../utilities/users-service";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Uploader } from "uploader";
 import { UploadButton } from "react-uploader";
+import FormSection from "../Form/FormSection";
+import LargeButton from "../Buttons/LargeButton";
 
 export default function SignUpForm({
   globalLink,
@@ -79,8 +80,8 @@ export default function SignUpForm({
   return (
     <div className={`login-register-form ${showRegister ? "" : "hide"}`}>
       <form autoComplete="off" onSubmit={handleSubmit}>
-        <div className="form-section flex">
-          <div className="form-icon flex">
+        <FormSection
+          icon={
             <svg viewBox="0 0 24 24">
               <path className="path-accent" d="M21,9H17m2,2V7"></path>
               <path
@@ -92,19 +93,16 @@ export default function SignUpForm({
                 d="M7,13.69A7,7,0,0,0,3,20a1,1,0,0,0,1,1H18a1,1,0,0,0,1-1,7,7,0,0,0-4-6.33"
               ></path>
             </svg>
-          </div>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Username"
-            required
-          />
-        </div>
+          }
+          inputType="text"
+          inputName="name"
+          inputValue={formData.name}
+          inputFunction={handleChange}
+          inputPlaceholder="Username"
+        />
 
-        <div className="form-section flex">
-          <div className="form-icon flex">
+        <FormSection
+          icon={
             <svg viewBox="0 0 24 24">
               <rect
                 className="path-accent"
@@ -119,18 +117,16 @@ export default function SignUpForm({
                 d="M21,6V8l-9,5L3,8V6A1,1,0,0,1,4,5H20A1,1,0,0,1,21,6Z"
               ></path>
             </svg>
-          </div>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email address"
-            required
-          />
-        </div>
-        <div className="form-section flex">
-          <div className="form-icon flex">
+          }
+          inputType="email"
+          inputName="email"
+          inputValue={formData.email}
+          inputFunction={handleChange}
+          inputPlaceholder="Email address"
+        />
+
+        <FormSection
+          icon={
             <svg viewBox="0 0 24 24">
               <path
                 className="path-accent"
@@ -145,18 +141,16 @@ export default function SignUpForm({
                 rx="1"
               ></rect>
             </svg>
-          </div>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            placeholder="Password"
-            required
-          />
-        </div>
-        <div className="form-section last-section flex">
-          <div className="form-icon flex">
+          }
+          inputType="password"
+          inputName="password"
+          inputValue={formData.password}
+          inputFunction={handleChange}
+          inputPlaceholder="Password"
+        />
+
+        <FormSection
+          icon={
             <svg viewBox="0 0 24 24">
               <path
                 className="path-accent"
@@ -171,16 +165,14 @@ export default function SignUpForm({
                 rx="1"
               ></rect>
             </svg>
-          </div>
-          <input
-            type="password"
-            name="confirm"
-            value={formData.confirm}
-            onChange={handleChange}
-            placeholder="Confirm password"
-            required
-          />
-        </div>
+          }
+          inputType="password"
+          inputName="confirm"
+          inputValue={formData.confirm}
+          inputFunction={handleChange}
+          inputPlaceholder="Confirm password"
+        />
+
         {userIcon ? <img className="icon" src={userIcon} alt="icon" /> : ""}
         <UploadButton
           uploader={uploader}
@@ -193,10 +185,9 @@ export default function SignUpForm({
             <button onClick={onClick}>Upload a Profile Photo</button>
           )}
         </UploadButton>
-        <button
-          type="submit"
-          disabled={disable}
-          onClick={() => {
+
+        <LargeButton
+          buttonFunction={() => {
             setFormData({
               ...formData,
               icon: `${
@@ -206,9 +197,9 @@ export default function SignUpForm({
               }`,
             });
           }}
-        >
-          Sign Up
-        </button>
+          buttonValue="Sign Up"
+          disable={disable}
+        />
         {error ? <div className="error-message">{error}</div> : ""}
       </form>
     </div>

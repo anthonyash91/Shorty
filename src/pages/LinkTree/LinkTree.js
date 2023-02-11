@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-export default function LinkTree() {
+export default function LinkTree({ domainName }) {
   const [userLinkTree, setuserLinkTree] = useState({});
   let { name } = useParams();
 
@@ -33,7 +33,7 @@ export default function LinkTree() {
               return (
                 <a
                   class="lib-link"
-                  href={`http://shrl.io/${shortUrl}`}
+                  href={`https://${domainName}/${shortUrl}`}
                   target="_blank"
                   key={i}
                 >
@@ -43,7 +43,7 @@ export default function LinkTree() {
             })
           : "Add links to your Link Tree from your dashboard."}
         <div>
-          Page provided by <a href="https://shrl.io">Shorty</a>.
+          Page provided by <a href={`https://${domainName}/`}>Shorty</a>.
         </div>
       </div>
     </>

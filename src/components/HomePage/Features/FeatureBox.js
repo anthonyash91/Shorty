@@ -1,4 +1,5 @@
-import SignUpNowButton from "./SignUpNowButton";
+import SmallButton from "../../Buttons/SmallButton";
+import { HashLink } from "react-router-hash-link";
 
 export default function FeatureBox({
   icon,
@@ -12,7 +13,19 @@ export default function FeatureBox({
       <div className="feature-icon">{icon}</div>
       <div className="feature-title">{featureTitle}</div>
       {featureDescription}
-      {user ? "" : <SignUpNowButton setShowRegister={setShowRegister} />}
+      {user ? (
+        ""
+      ) : (
+        <HashLink
+          smooth
+          to="#"
+          onClick={() => {
+            setShowRegister(true);
+          }}
+        >
+          <SmallButton buttonValue="Sign Up Now!" />
+        </HashLink>
+      )}
     </div>
   );
 }

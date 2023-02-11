@@ -1,6 +1,8 @@
 import { useState } from "react";
 import * as userService from "../../utilities/users-service";
 import { useNavigate } from "react-router-dom";
+import FormSection from "../Form/FormSection";
+import LargeButton from "../Buttons/LargeButton";
 
 export default function LoginForm({
   setUser,
@@ -37,8 +39,8 @@ export default function LoginForm({
   return (
     <div className={`login-register-form ${showLogin ? "" : "hide"}`}>
       <form autoComplete="off" onSubmit={handleSubmit}>
-        <div className="form-section flex">
-          <div className="form-icon flex">
+        <FormSection
+          icon={
             <svg viewBox="0 0 24 24">
               <rect
                 className="path-accent"
@@ -53,18 +55,17 @@ export default function LoginForm({
                 d="M21,6V8l-9,5L3,8V6A1,1,0,0,1,4,5H20A1,1,0,0,1,21,6Z"
               ></path>
             </svg>
-          </div>
-          <input
-            type="email"
-            name="email"
-            value={credentials.email}
-            onChange={handleChange}
-            placeholder="Email"
-            required
-          />
-        </div>
-        <div className="form-section last-section flex">
-          <div className="form-icon flex">
+          }
+          inputType="email"
+          inputName="email"
+          inputValue={credentials.email}
+          inputFunction={handleChange}
+          inputPlaceholder="Email"
+        />
+
+        <FormSection
+          formClass="last-section"
+          icon={
             <svg viewBox="0 0 24 24">
               <path
                 className="path-accent"
@@ -79,18 +80,15 @@ export default function LoginForm({
                 rx="1"
               ></rect>
             </svg>
-          </div>
-          <input
-            type="password"
-            name="password"
-            value={credentials.password}
-            onChange={handleChange}
-            placeholder="Password"
-            required
-          />
-        </div>
+          }
+          inputType="password"
+          inputName="password"
+          inputValue={credentials.password}
+          inputFunction={handleChange}
+          inputPlaceholder="Password"
+        />
 
-        <button type="submit">Login</button>
+        <LargeButton buttonValue="Login" />
         {error ? <div className="error-message">{error}</div> : ""}
       </form>
     </div>

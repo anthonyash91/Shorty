@@ -108,7 +108,7 @@ function App() {
             />
           }
         />
-        <Route path="/u/:name" element={<LinkTree />} />
+        <Route path="/u/:name" element={<LinkTree domainName={domainName} />} />
 
         {user ? (
           <Route

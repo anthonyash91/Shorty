@@ -22,8 +22,7 @@ export default function Features({ user, setShowRegister }) {
             </svg>
           }
           featureTitle="Link-In-Bio"
-          featureDescription="Personalized
-          Link-in-bios make sharing links with friends easy."
+          featureDescription="Personalized Link-in-bios make sharing links with friends easy."
           user={user}
           setShowRegister={setShowRegister}
         />

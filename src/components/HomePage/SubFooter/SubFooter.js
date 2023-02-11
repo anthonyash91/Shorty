@@ -1,4 +1,5 @@
 import { HashLink } from "react-router-hash-link";
+import SmallButton from "../../Buttons/SmallButton";
 
 export default function SubFooter({ user, setShowRegister }) {
   return (
@@ -16,7 +17,7 @@ export default function SubFooter({ user, setShowRegister }) {
                 setShowRegister(true);
               }}
             >
-              <button>Sign up</button>
+              <SmallButton buttonValue="Sign Up!" />
             </HashLink>
           </>
         )}
