@@ -1308,7 +1308,7 @@ b {
 }
 
 .link-shortened .link-copied.hide {
-  opacity: ;
+  opacity: 0;
 }
 
 .link-shortened svg:active {
