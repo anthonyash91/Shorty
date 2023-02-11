@@ -1,26 +1,26 @@
-const express = require("express");
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 const {
   dataController,
-  apiController,
-} = require("../../controllers/api/links");
+  apiController
+} = require('../../controllers/api/links')
 
 // GET: Index api/links ( )
-router.get("/", dataController.index, apiController.index);
+router.get('/', dataController.index, apiController.index)
 // DELETE
-router.delete("/:id", dataController.destroy, apiController.show);
+router.delete('/:id', dataController.destroy, apiController.show)
 // Create /api/links
-router.post("/", dataController.create, apiController.show);
+router.post('/', dataController.create, apiController.show)
 // Put
-router.put("/:id/user/:userId", dataController.update, apiController.show);
+router.put('/:id/user/:userId', dataController.update, apiController.show)
 // Show: Get /api/links/:id
-router.get("/:id", dataController.show, apiController.show);
+router.get('/:id', dataController.show, apiController.show)
 
 // Pass in the user ID
 router.post(
-  "/:userId",
+  '/:userId',
   dataController.createLinkForLoggedInUser,
   apiController.show
-);
+)
 
-module.exports = router;
+module.exports = router

@@ -1,8 +1,8 @@
-export default function SmallButton({
+export default function SmallButton ({
   buttonId,
   buttonClass,
   buttonFunction,
-  buttonValue,
+  buttonValue
 }) {
   return (
     <>
@@ -10,5 +10,5 @@ export default function SmallButton({
         {buttonValue}
       </button>
     </>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import UserDetails from "./UserDetails";
-import NewShorty from "./NewShorty/NewShorty";
+import UserDetails from './UserDetails'
+import NewShorty from './NewShorty/NewShorty'
 
-export default function UserHeader({
+export default function UserHeader ({
   user,
   setShowNewShortyForm,
   showNewShortyForm,
@@ -12,13 +12,13 @@ export default function UserHeader({
   linkTreeToggled,
   handleUserLinkChange,
   setUser,
-  setNewIcon,
+  setNewIcon
 }) {
   const handleLinkTreeToggle = () => {
-    setLinkTreeToggled(!linkTreeToggled);
-  };
+    setLinkTreeToggled(!linkTreeToggled)
+  }
   return (
-    <div id="user-greeting" className="flex">
+    <div id='user-greeting' className='flex'>
       <UserDetails user={user} setUser={setUser} setNewIcon={setNewIcon} />
 
       <NewShorty
@@ -33,5 +33,5 @@ export default function UserHeader({
         handleLinkTreeToggle={handleLinkTreeToggle}
       />
     </div>
-  );
+  )
 }

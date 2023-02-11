@@ -1,9 +1,9 @@
-import Link from "./Link";
-import LinkHeader from "./LinkHeader";
-import LinkCopyIcon from "./LinkCopyIcon";
-import LinkContent from "./LinkContent";
+import Link from './Link'
+import LinkHeader from './LinkHeader'
+import LinkCopyIcon from './LinkCopyIcon'
+import LinkContent from './LinkContent'
 
-export default function LinkContainer({
+export default function LinkContainer ({
   date,
   clicks,
   domainName,
@@ -12,13 +12,13 @@ export default function LinkContainer({
   _id,
   title,
   url,
-  setShowCopiedMessage,
+  setShowCopiedMessage
 }) {
   return (
-    <div className="link-container-section">
+    <div className='link-container-section'>
       <LinkHeader date={date} clicks={clicks} />
 
-      <div className="link-shortened flex">
+      <div className='link-shortened flex'>
         <Link
           domainName={domainName}
           shortUrl={shortUrl}
@@ -39,5 +39,5 @@ export default function LinkContainer({
 
       <LinkContent url={url} />
     </div>
-  );
+  )
 }

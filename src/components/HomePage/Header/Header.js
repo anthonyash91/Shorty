@@ -1,9 +1,9 @@
-import { useState } from "react";
-import Nav from "./Nav/Nav";
-import CallToAction from "./CallToAction";
-import ShortenForm from "./ShortenForm/ShortenForm";
+import { useState } from 'react'
+import Nav from './Nav/Nav'
+import CallToAction from './CallToAction'
+import ShortenForm from './ShortenForm/ShortenForm'
 
-export default function Header({
+export default function Header ({
   user,
   domainName,
   setUser,
@@ -20,12 +20,12 @@ export default function Header({
   handleUserLinkChange,
   setNewGlobalLink,
   showRegister,
-  setShowRegister,
+  setShowRegister
 }) {
-  const [showLogin, setShowLogin] = useState(false);
+  const [showLogin, setShowLogin] = useState(false)
 
   return (
-    <header className="flex">
+    <header className='flex'>
       <Nav
         user={user}
         setUser={setUser}
@@ -60,5 +60,5 @@ export default function Header({
         setShowLogin={setShowLogin}
       />
     </header>
-  );
+  )
 }

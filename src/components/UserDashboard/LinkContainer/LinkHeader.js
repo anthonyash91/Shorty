@@ -1,8 +1,8 @@
-export default function LinkHeader({ date, clicks }) {
+export default function LinkHeader ({ date, clicks }) {
   return (
-    <div className="link-date-clicks flex">
+    <div className='link-date-clicks flex'>
       {date} <span>•</span> {clicks} click
-      {clicks === 1 ? "" : "s"}
+      {clicks === 1 ? '' : 's'}
     </div>
-  );
+  )
 }

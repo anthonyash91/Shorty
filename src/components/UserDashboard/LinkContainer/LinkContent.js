@@ -1,7 +1,7 @@
-export default function LinkContent({ url }) {
+export default function LinkContent ({ url }) {
   return (
-    <div className="link-title flex">
-      <div className="link-title-text">{url}</div>
+    <div className='link-title flex'>
+      <div className='link-title-text'>{url}</div>
     </div>
-  );
+  )
 }

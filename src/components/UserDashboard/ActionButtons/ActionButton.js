@@ -1,11 +1,11 @@
-export default function ActionButton({
+export default function ActionButton ({
   buttonFunction,
   buttonClass,
-  buttonIcon,
+  buttonIcon
 }) {
   return (
     <button onClick={buttonFunction} className={buttonClass}>
       {buttonIcon}
     </button>
-  );
+  )
 }

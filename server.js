@@ -1,48 +1,47 @@
 // /server.js
-require("dotenv").config();
-require("./config/database");
-const express = require("express");
-const path = require("path");
-const favicon = require("serve-favicon");
-const logger = require("morgan");
-const Link = require("./models/link");
-const User = require("./models/user");
-const PORT = process.env.PORT || 3001;
+require('dotenv').config()
+require('./config/database')
+const express = require('express')
+const path = require('path')
+const favicon = require('serve-favicon')
+const logger = require('morgan')
+const Link = require('./models/link')
+const PORT = process.env.PORT || 3001
 
-const app = express();
+const app = express()
 
-app.use(express.json()); // req.body
+app.use(express.json()) // req.body
 app.use((req, res, next) => {
-  res.locals.data = {};
-  next();
-});
-app.use(logger("dev"));
-app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
-app.use(express.static(path.join(__dirname, "build")));
+  res.locals.data = {}
+  next()
+})
+app.use(logger('dev'))
+app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')))
+app.use(express.static(path.join(__dirname, 'build')))
 
-app.use("/api/links", require("./routes/api/links"));
-app.use("/api/faqs", require("./routes/api/faqs"));
+app.use('/api/links', require('./routes/api/links'))
+app.use('/api/faqs', require('./routes/api/faqs'))
 
-app.use(require("./config/checkToken"));
+app.use(require('./config/checkToken'))
 /*
 app.use('/api', routes) <====== Finish code once you got it
 */
-app.use("/api/users", require("./routes/api/users"));
+app.use('/api/users', require('./routes/api/users'))
 
-app.get("/:shortUrl", async (req, res) => {
-  const shortUrl = await Link.findOne({ shortUrl: req.params.shortUrl });
-  if (shortUrl == null) return res.sendStatus(404);
+app.get('/:shortUrl', async (req, res) => {
+  const shortUrl = await Link.findOne({ shortUrl: req.params.shortUrl })
+  if (shortUrl == null) return res.sendStatus(404)
 
-  shortUrl.clicks++;
-  shortUrl.save();
+  shortUrl.clicks++
+  shortUrl.save()
 
-  res.redirect(shortUrl.url);
-});
+  res.redirect(shortUrl.url)
+})
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
 
 app.listen(PORT, () => {
-  console.log(`I am listening on ${PORT}`);
-});
+  console.log(`I am listening on ${PORT}`)
+})

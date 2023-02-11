@@ -1,7 +1,7 @@
-import Logo from "./Logo";
-import NavButtons from "./NavButtons/NavButtons";
+import Logo from './Logo'
+import NavButtons from './NavButtons/NavButtons'
 
-export default function Nav({
+export default function Nav ({
   user,
   setUser,
   setShowShortenedUrl,
@@ -11,11 +11,11 @@ export default function Nav({
   showLogin,
   setNewGlobalLink,
   globalLink,
-  showRegister,
+  showRegister
 }) {
   return (
-    <div id="nav-container" className="flex">
-      <nav className="flex">
+    <div id='nav-container' className='flex'>
+      <nav className='flex'>
         <Logo setShowShortenedUrl={setShowShortenedUrl} />
 
         <NavButtons
@@ -32,5 +32,5 @@ export default function Nav({
         />
       </nav>
     </div>
-  );
+  )
 }

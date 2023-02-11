@@ -1,31 +1,31 @@
-import Input from "../../../Inputs/Input";
+import Input from '../../../Inputs/Input'
 
-export default function LinkTreeToggle({
+export default function LinkTreeToggle ({
   linkTreeToggled,
   handleUserLinkChange,
-  handleLinkTreeToggle,
+  handleLinkTreeToggle
 }) {
   return (
-    <div id="in-linktree-container" className="flex">
-      <div className="in-linktree flex">
+    <div id='in-linktree-container' className='flex'>
+      <div className='in-linktree flex'>
         <Input
-          inputType="checkbox"
-          inputName="linkTree"
-          inputValue={!linkTreeToggled ? "on" : "off"}
+          inputType='checkbox'
+          inputName='linkTree'
+          inputValue={!linkTreeToggled ? 'on' : 'off'}
           inputFunction={handleUserLinkChange}
           inputClick={handleLinkTreeToggle}
-          required="false"
+          required='false'
         />
 
         <div
-          className={`linktree-toggle ${linkTreeToggled ? "toggled" : ""}`}
+          className={`linktree-toggle ${linkTreeToggled ? 'toggled' : ''}`}
         />
       </div>
-      <div className={`toggle-text ${linkTreeToggled ? "toggled" : ""}`}>
+      <div className={`toggle-text ${linkTreeToggled ? 'toggled' : ''}`}>
         {linkTreeToggled
-          ? "Added to your Link-In-Bio"
-          : "Add to your Link-In-Bio"}
+          ? 'Added to your Link-In-Bio'
+          : 'Add to your Link-In-Bio'}
       </div>
     </div>
-  );
+  )
 }

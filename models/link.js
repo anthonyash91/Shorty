@@ -1,23 +1,23 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require('mongoose')
 
 const linkSchema = new Schema(
   {
     url: { type: String, required: true },
-    shortUrl: { type: String, required: true, default: "" },
-    userId: { type: String, required: false, default: "" },
-    title: { type: String, required: false, default: "" },
+    shortUrl: { type: String, required: true, default: '' },
+    userId: { type: String, required: false, default: '' },
+    title: { type: String, required: false, default: '' },
     linkTree: { type: Boolean, required: false, default: false },
     date: {
       type: String,
-      default: "",
+      default: ''
     },
     clicks: { type: Number, required: true, default: 0 }
   },
   {
-    timestamps: true,
+    timestamps: true
   }
-);
+)
 
-const Link = model("Link", linkSchema);
+const Link = model('Link', linkSchema)
 
-module.exports = Link;
+module.exports = Link

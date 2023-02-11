@@ -1,14 +1,14 @@
-export default function LargeButton({
+export default function LargeButton ({
   buttonId,
   buttonClass,
   buttonFunction,
   buttonValue,
-  disable,
+  disable
 }) {
   return (
     <>
       <button
-        type="submit"
+        type='submit'
         id={buttonId}
         className={buttonClass}
         onClick={buttonFunction}
@@ -17,5 +17,5 @@ export default function LargeButton({
         {buttonValue}
       </button>
     </>
-  );
+  )
 }

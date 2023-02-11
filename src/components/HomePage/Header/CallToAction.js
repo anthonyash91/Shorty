@@ -1,4 +1,4 @@
-export default function CallToAction() {
+export default function CallToAction () {
   return (
     <>
       <h1>Shorten Your URLs</h1>
@@ -7,5 +7,5 @@ export default function CallToAction() {
         your URLs and make them easier to share with the world.
       </h2>
     </>
-  );
+  )
 }

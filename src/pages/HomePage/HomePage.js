@@ -1,11 +1,11 @@
-import { useState } from "react";
-import Header from "../../components/HomePage/Header/Header";
-import Features from "../../components/HomePage/Features/Features";
-import Faqs from "../../components/HomePage/Faqs/Faqs";
-import SubFooter from "../../components/HomePage/SubFooter/SubFooter";
-import Footer from "../../components/Footer/Footer";
+import { useState } from 'react'
+import Header from '../../components/HomePage/Header/Header'
+import Features from '../../components/HomePage/Features/Features'
+import Faqs from '../../components/HomePage/Faqs/Faqs'
+import SubFooter from '../../components/HomePage/SubFooter/SubFooter'
+import Footer from '../../components/Footer/Footer'
 
-export default function HomePage({
+export default function HomePage ({
   user,
   domainName,
   setUser,
@@ -20,9 +20,9 @@ export default function HomePage({
   newUserLink,
   setNewUserLink,
   handleUserLinkChange,
-  setNewGlobalLink,
+  setNewGlobalLink
 }) {
-  const [showRegister, setShowRegister] = useState(false);
+  const [showRegister, setShowRegister] = useState(false)
 
   return (
     <>
@@ -54,5 +54,5 @@ export default function HomePage({
 
       <Footer />
     </>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-export default function ShortenInput({
+export default function ShortenInput ({
   inputType,
   inputName,
   inputValue,
   inputFunction,
-  inputPlaceholder,
+  inputPlaceholder
 }) {
   return (
     <input
@@ -14,5 +14,5 @@ export default function ShortenInput({
       placeholder={inputPlaceholder}
       required
     />
-  );
+  )
 }

@@ -1,12 +1,12 @@
-export default function FaqDeleteButton({ deleteFaq, id }) {
+export default function FaqDeleteButton ({ deleteFaq, id }) {
   return (
     <span
-      className="delete-faq"
+      className='delete-faq'
       onClick={() => {
-        deleteFaq(id);
+        deleteFaq(id)
       }}
     >
       Delete FAQ
     </span>
-  );
+  )
 }

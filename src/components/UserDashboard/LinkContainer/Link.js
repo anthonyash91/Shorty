@@ -1,18 +1,18 @@
-export default function Link({
+export default function Link ({
   domainName,
   shortUrl,
   showCopiedMessage,
   _id,
   title,
-  url,
+  url
 }) {
   return (
     <a
       href={`https://${domainName}/${shortUrl}`}
-      target="_blank"
-      className={showCopiedMessage === _id ? "copied" : ""}
+      target='_blank'
+      className={showCopiedMessage === _id ? 'copied' : ''} rel='noreferrer'
     >
-      {title ? title : url}
+      {title || url}
     </a>
-  );
+  )
 }
