@@ -6,7 +6,7 @@ import { UploadButton } from 'react-uploader'
 import FormSection from '../Form/FormSection'
 import LargeButton from '../Buttons/LargeButton'
 
-export default function SignUpForm ({
+export default function SignUpForm({
   globalLink,
   setUser,
   showRegister,
@@ -54,7 +54,7 @@ export default function SignUpForm ({
   }
 
   const uploader = Uploader({
-    apiKey: 'public_FW25b3h8aR2hb4QHapA4e1NkptXN'
+    apiKey: 'public_W142hdaG777hNKomSpjcvoZRQ4AM'
   })
 
   const options = {
@@ -189,11 +189,10 @@ export default function SignUpForm ({
           buttonFunction={() => {
             setFormData({
               ...formData,
-              icon: `${
-                userIcon === ''
+              icon: `${userIcon === ''
                   ? 'https://static-00.iconduck.com/assets.00/avatar-default-symbolic-icon-512x488-rddkk3u9.png'
                   : userIcon
-              }`
+                }`
             })
           }}
           buttonValue='Sign Up'
