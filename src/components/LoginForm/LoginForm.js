@@ -42,6 +42,7 @@ export default function LoginForm({
         <div>Sign in using:</div>
         <div>Email: anthony@anthony.com</div>
         <div>Password: 123456</div>
+        <div>&nbsp;</div>
         <FormSection
           icon={
             <svg viewBox="0 0 24 24">

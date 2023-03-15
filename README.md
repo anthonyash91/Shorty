@@ -1,6 +1,6 @@
 # SHORTY
 
-## [Deployed App](https://shorty-url-ga.herokuapp.com)
+## [Deployed App](https://aa-shorty.herokuapp.com/)
 
 # Introduction:
 
