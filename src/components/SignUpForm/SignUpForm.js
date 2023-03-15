@@ -79,10 +79,6 @@ export default function SignUpForm({
 
   return (
     <div className={`login-register-form ${showRegister ? '' : 'hide'}`}>
-      Sign in using: <br />
-      email: anthony@anthony.com
-      <br />
-      password: 123456
       <form autoComplete="off" onSubmit={handleSubmit}>
         <FormSection
           icon={

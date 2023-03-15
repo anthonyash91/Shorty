@@ -8,7 +8,7 @@ import LinkTree from '../LinkTree/LinkTree';
 
 function App() {
   const [user, setUser] = useState(getUser());
-  const [domainName, setDomainName] = useState('aa-shorty.herokuapp.com/');
+  const [domainName, setDomainName] = useState('aa-shorty.herokuapp.com');
   const [globalLink, setGlobalLink] = useState({});
   const [newGlobalLink, setNewGlobalLink] = useState({
     url: '',
