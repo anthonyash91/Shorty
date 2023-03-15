@@ -39,10 +39,9 @@ export default function LoginForm({
   return (
     <div className={`login-register-form ${showLogin ? '' : 'hide'}`}>
       <form autoComplete="off" onSubmit={handleSubmit}>
-        Sign in using: <br />
-        email: anthony@anthony.com
-        <br />
-        password: 123456
+        <div>Sign in using:</div>
+        <div>Email: anthony@anthony.com</div>
+        <div>Password: 123456</div>
         <FormSection
           icon={
             <svg viewBox="0 0 24 24">
